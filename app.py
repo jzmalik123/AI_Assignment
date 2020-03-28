@@ -65,12 +65,10 @@ def main():
     for x in range(T):
         start_goal = input().split("\t")
         solution = search(start_goal)
-        for result in solution:
-            print(result,end="")
-            if result is not solution[-1]:
+        for i in range(len(solution)):
+            print(solution[i],end="")
+            if i is not len(solution)-1:
                 print("->",end="")
         print("")
 
 main()
-
-
